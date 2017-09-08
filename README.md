@@ -59,4 +59,4 @@ crystal run src/your_app.cr
 [development] Kemal is ready to lead at http://0.0.0.0:3000
 ```
 8. Go to localhost:3000
-
+```
