@@ -16,6 +16,10 @@ Kemal is the standard the facto web framework for Crystal, lightning fast and su
 
 ![kemal](./assets/2.png)
 
+## Creating a simple app with Crystal programming language and Kemal framework
+
+![screenshot1](./assets/a.png)
+![screenshot2](./assets/b.png)
 
 
 ## How to install
@@ -141,5 +145,41 @@ end
 Kemal.run
 end
 ```
+
+### CSS Styling 
+We create a public directory at the root of our app and inside we can have our css directory with our stylesheets inside.
+
+We link our stylesheet and google fonts links at the top of our ecr views pages.
+```
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+```
+
+Below are some of the classes we used in our HTML elements to target our css styles.
+
+```
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<div class="main-jokes-container">
+    <div class="jokes-page">
+        <h1 class="headline"><a href='/jokes'>Chuck Norris Jokes</a></h1>
+    </div>
+    <div class="all-jokes">
+        <ul>
+            <% jokes.each do |joke| %>
+                <li><%= joke["joke"] %> </li>
+            <%end%>
+        </ul>
+    </div>
+</div>
+```
+
+
+
+
+
 
 
