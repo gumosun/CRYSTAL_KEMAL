@@ -61,4 +61,44 @@ crystal run src/your_app.cr
 * Go to localhost:3000
 You should be able to see "Hello World!" on your browser
 
+### HTTP Parameters
+Kemal allows you to use variables in your route path as placeholders for passing data. To access URL parameters, you use env.params.url.
+
+You can create something like this as your route
+
+```
+get "/:name" do |env|
+  name = env.params.url["name"].capitalize
+  puts "Hello back to #{name}"
+end
+```
+### Templates
+You can use ERB-like built-in ECR to render dynamic views.
+In your routes.cr, you can directly render that ECR file.
+So we can modify the codes we just wrote and render the template like this
+```
+get "/:name" do |env|
+  name = env.params.url["name"].capitalize
+  render "src/views/hello.ecr"
+end
+```
+Then, we create a views folder under src
+
+### Request API
+In Kemal, if you want to request API you have to require some modules first
+```
+require "http/client"
+require "json"
+require "./crystal_testing/*"
+require "kemal"
+```
+Here we used the Chuck Norris jokes API to create a sample app
+```
+class Chucky
+  def get_joke
+    response = HTTP::Client.get "http://api.icndb.com/jokes/random/1"
+    JSON.parse(response.body)["value"]
+  end
+```
+
 
