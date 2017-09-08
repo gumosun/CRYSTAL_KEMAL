@@ -9,11 +9,12 @@ Crystal don’t work on Windows. So you have to use a Mac or a Linux based syste
 
 Use the Crystal extension to provide support for the Crystal programming language.
 
+![crystal](./assets/1.png)
 
 ## What is Kemal?
 Kemal is the standard the facto web framework for Crystal, lightning fast and super simple.
 
-
+![kemal](./assets/2.png)
 
 
 
