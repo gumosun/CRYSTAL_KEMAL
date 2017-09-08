@@ -42,6 +42,9 @@ table {
 	border-spacing: 0;
 }
 /* GENERAL */
+a{
+    text-decoration: none;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -51,10 +54,17 @@ body {
     background: #19B5FE;
     text-align: center;
 }
-.container h1 {
+.headline {
     font-family: 'Covered By Your Grace', cursive;
     font-size: 50px;
     padding-top: 50px;
+}
+.headline a {
+    color: white;
+}
+.headline a:hover {
+    color: #F9BF3B;
+    cursor: pointer;
 }
 .joke-container {
     width: 80%;
@@ -64,6 +74,27 @@ body {
     font-family: 'Covered By Your Grace', cursive;
     color: white;
     padding-bottom: 50px;
+}
+.jokes-page {
+    padding-bottom: 40px;
+}
+.jokes-page h1 {
+    text-align: center;
+}
+.main-jokes-container{
+    width: 100%;
+    height: auto;
+    background: #19B5FE;
+}
+.all-jokes{
+    width: 80%;
+    margin: 0 auto;
+}
+.all-jokes ul li {
+    padding-bottom: 40px;
+    font-size: 43px;
+    line-height: 48px;
+    font-family: 'Covered By Your Grace', cursive;
 }
 button {
     border: none;

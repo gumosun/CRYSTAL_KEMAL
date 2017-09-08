@@ -1,9 +1,17 @@
-<div>
-<h2>Chuck Norris Jokes</h2>
-<a href='/jokes'>Home</a>
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<div class="main-jokes-container">
+    <div class="jokes-page">
+        <h1 class="headline"><a href='/jokes'>Chuck Norris Jokes</a></h1>
+    </div>
+    <div class="all-jokes">
+        <ul>
+            <% jokes.each do |joke| %>
+                <li><%= joke["joke"] %> </li>
+            <%end%>
+        </ul>
+    </div>
 </div>
-<ul>
-<% jokes.each do |joke| %>
-<li><%= joke["joke"] %> </li>
-<%end%>
-</ul>
+
