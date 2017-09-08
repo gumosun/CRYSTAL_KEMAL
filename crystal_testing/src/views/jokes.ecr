@@ -1,8 +1,13 @@
-<h2>Jokes</h2>
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+<div class="container">
+    <h1>Chuck Norris Jokes</h1>
+    <div class="joke-container">
+        <% jokes.each do |joke| %>
+            <%= joke["joke"] %>
+        <%end%>
+    </div>  
+</div>
 
-<ul>
-<% jokes.each do |joke| %>
-<li><%= joke["joke"] %> </li>
-<%end%>
-</ul>
+
 

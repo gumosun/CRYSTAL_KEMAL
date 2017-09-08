@@ -7,7 +7,7 @@ module Joking
 
 class Chucky
   def get_joke
-    response = HTTP::Client.get "http://api.icndb.com/jokes/random/10"
+    response = HTTP::Client.get "http://api.icndb.com/jokes/random/1"
     JSON.parse(response.body)["value"]
   end
 end
