@@ -41,14 +41,43 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* GENERAL */
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .container {
     width: 100%;
     height: 100vh;
-    background: #1F3A93;
+    background: #19B5FE;
     text-align: center;
 }
 .container h1 {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 50px;
+    padding-top: 50px;
 }
-
+.joke-container {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 60px;
+    padding-top: 120px;
+    font-family: 'Covered By Your Grace', cursive;
+    color: white;
+    padding-bottom: 50px;
+}
+button {
+    border: none;
+    background: #ECF0F1;
+    padding: 22px;
+    font-size: 19px;
+    border-radius: 50px;
+    color: #2a2a2a;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background: #F9BF3B;
+    color: white;
+}
