@@ -19,11 +19,11 @@ Kemal is the standard the facto web framework for Crystal, lightning fast and su
 
 
 ## How to install
-1. Install Crystal 
+1. First, we need to install Crystal 
 ```
 brew install crystal-lang
 ```
-2. Create your application
+2. Then,we can start to create a new application
 ```
 crystal init app your_app_name
 cd your_app
@@ -39,6 +39,8 @@ dependencies:
 ```
 shards install
 ```
+Now we get both Crystal and Kemal, let's see how to create a hello world app
+
 ## First hello world app by using crystal 
 In src/your_app_name put these codes
 ```
@@ -92,13 +94,52 @@ require "json"
 require "./crystal_testing/*"
 require "kemal"
 ```
-Here we used the Chuck Norris jokes API to create a sample app
+Here we used the Chuck Norris jokes API to create a sample app.
+We touch a new chucky.cr in src folder and create a new class Chucky
 ```
 class Chucky
   def get_joke
     response = HTTP::Client.get "http://api.icndb.com/jokes/random/1"
     JSON.parse(response.body)["value"]
   end
+```
+Crystal has built-in with an HTTP client and JSON parser and that's how we request the API 
+and set up the response data.
+
+Here are the complete code we have in the end
+```
+require "http/client"
+require "json"
+require "./crystal_testing/*"
+require "kemal"
+
+module Joking
+
+class Chucky
+  def get_joke
+    response = HTTP::Client.get "http://api.icndb.com/jokes/random/1"
+    JSON.parse(response.body)["value"]
+  end
+  def get_all
+    response = HTTP::Client.get "http://api.icndb.com/jokes/random/100"
+    JSON.parse(response.body)["value"]
+  end
+end
+  
+get "/jokes" do 
+  c = Chucky.new
+  jokes = c.get_joke
+  render "src/views/jokes.ecr"
+end
+
+get "/jokes/all" do 
+  c = Chucky.new
+  jokes = c.get_all
+  render "src/views/alljokes.ecr"
+end
+
+Kemal.run
+end
 ```
 
 
