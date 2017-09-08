@@ -1,9 +1,13 @@
-<div>
-<h2>Chuck Norris Jokes</h2>
-<a href='/jokes/all'>More Jokes</a>
+<link href="/css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+<div class="container">
+    <h1>Chuck Norris Jokes</h1>
+    <a href='/jokes/all'>More Jokes</a>
+    <div class="joke-container">
+        <% jokes.each do |joke| %>
+            <%= joke["joke"] %>
+        <%end%>
+    </div>  
+  <button class="button" onclick="location.href='/jokes';"> Get New Joke</button>            
 </div>
-<% jokes.each do |joke| %>
-<p><%= joke["joke"] %></p> 
-<%end%>
-<button class="button" onclick="location.href='/jokes';"> Get New Joke</button>
 
