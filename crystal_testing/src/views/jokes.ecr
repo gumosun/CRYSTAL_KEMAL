@@ -1,8 +1,9 @@
-<h2>Jokes</h2>
-
-<ul>
+<div>
+<h2>Chuck Norris Jokes</h2>
+<a href='/jokes/all'>More Jokes</a>
+</div>
 <% jokes.each do |joke| %>
-<li><%= joke["joke"] %> </li>
+<p><%= joke["joke"] %></p> 
 <%end%>
-</ul>
+<button class="button" onclick="location.href='/jokes';"> Get New Joke</button>
 

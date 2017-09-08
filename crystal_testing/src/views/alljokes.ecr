@@ -1,0 +1,9 @@
+<div>
+<h2>Chuck Norris Jokes</h2>
+<a href='/jokes'>Home</a>
+</div>
+<ul>
+<% jokes.each do |joke| %>
+<li><%= joke["joke"] %> </li>
+<%end%>
+</ul>
