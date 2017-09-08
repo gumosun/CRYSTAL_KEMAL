@@ -1,0 +1,18 @@
+name: crystal_testing
+version: 0.1.0
+
+authors:
+  - Hao Sun <hao.sun@nyu.edu>
+
+targets:
+  crystal_testing:
+    main: src/crystal_testing.cr
+
+crystal: 0.23.1
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    branch: master
