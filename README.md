@@ -24,30 +24,30 @@ Kemal is the standard the facto web framework for Crystal, lightning fast and su
 
 ## How to install
 1. First, we need to install Crystal 
-```
+```diff
 brew install crystal-lang
 ```
 2. Then,we can start to create a new application
-```
+```diff
 crystal init app your_app_name
 cd your_app
 ```
 3. Add kemal to the shard.yml file as a dependency.
-```
+```diff
 dependencies:
   kemal:
     github: kemalcr/kemal
     branch: master
 ```
 4. Run shards to get dependencies:
-```
+```diff
 shards install
 ```
 Now we get both Crystal and Kemal, let's see how to create a hello world app
 
 ## First hello world app by using crystal 
 In src/your_app_name put these codes
-```
+```diff
 require "kemal"
 
 get "/" do
@@ -57,11 +57,11 @@ end
 Kemal.run
 ```
 * Run the app
-```
+```diff
 crystal run src/your_app.cr
 ```
 * You should see some logs like these:
-```
+```diff
 [development] Kemal is ready to lead at http://0.0.0.0:3000
 ```
 * Go to localhost:3000
@@ -72,7 +72,7 @@ Kemal allows you to use variables in your route path as placeholders for passing
 
 You can create something like this as your route
 
-```
+```diff
 get "/:name" do |env|
   name = env.params.url["name"].capitalize
   puts "Hello back to #{name}"
@@ -82,7 +82,7 @@ end
 You can use ERB-like built-in ECR to render dynamic views.
 In your routes.cr, you can directly render that ECR file.
 So we can modify the codes we just wrote and render the template like this
-```
+```diff
 get "/:name" do |env|
   name = env.params.url["name"].capitalize
   render "src/views/hello.ecr"
@@ -92,7 +92,7 @@ Then, we create a views folder under src
 
 ### Request API
 In Kemal, if you want to request API you have to require some modules first
-```
+```diff
 require "http/client"
 require "json"
 require "./crystal_testing/*"
@@ -100,7 +100,7 @@ require "kemal"
 ```
 Here we used the Chuck Norris jokes API to create a sample app.
 We touch a new chucky.cr in src folder and create a new class Chucky
-```
+```diff
 class Chucky
   def get_joke
     response = HTTP::Client.get "http://api.icndb.com/jokes/random/1"
@@ -111,7 +111,7 @@ Crystal has built-in with an HTTP client and JSON parser and that's how we reque
 and set up the response data.
 
 Here are the complete code we have in the end
-```
+```diff
 require "http/client"
 require "json"
 require "./crystal_testing/*"
@@ -150,7 +150,7 @@ end
 We create a public directory at the root of our app and inside we can have our css directory with our stylesheets inside.
 
 We link our stylesheet and google fonts links at the top of our ecr views pages.
-```
+```diff
 <link href="/css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -158,7 +158,7 @@ We link our stylesheet and google fonts links at the top of our ecr views pages.
 
 Below are some of the classes we used in our HTML elements to target our css styles.
 
-```
+```diff
 <link href="/css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
