@@ -38,5 +38,25 @@ dependencies:
 4. Run shards to get dependencies:
 ```
 shards install
+```
+5. Hello word 
+In src/your_app_name put these codes
+```
+require "kemal"
 
+get "/" do
+  "Hello World!"
+end
+
+Kemal.run
+```
+6. Run the app
+```
+crystal run src/your_app.cr
+```
+7. You should see some logs like these:
+```
+[development] Kemal is ready to lead at http://0.0.0.0:3000
+```
+8. Go to localhost:3000
 ```
