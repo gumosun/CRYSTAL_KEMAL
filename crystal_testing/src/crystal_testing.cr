@@ -3,7 +3,7 @@ require "kemal"
 
 module CrystalTesting
 get "/" do
-  "Hello we are Bri and Hao!!"
+  "Hello World"
 end
 
 get "/:name" do |env|
