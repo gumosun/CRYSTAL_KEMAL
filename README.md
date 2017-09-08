@@ -39,7 +39,7 @@ dependencies:
 ```
 shards install
 ```
-5. Hello word 
+## First hello world app by using crystal 
 In src/your_app_name put these codes
 ```
 require "kemal"
@@ -50,13 +50,15 @@ end
 
 Kemal.run
 ```
-6. Run the app
+* Run the app
 ```
 crystal run src/your_app.cr
 ```
-7. You should see some logs like these:
+* You should see some logs like these:
 ```
 [development] Kemal is ready to lead at http://0.0.0.0:3000
 ```
-8. Go to localhost:3000
-```
+* Go to localhost:3000
+You should be able to see "Hello World!" on your browser
+
+
