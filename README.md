@@ -12,7 +12,19 @@ Use the Crystal extension to provide support for the Crystal programming languag
 ![crystal](./assets/1.png)
 
 ## What is Kemal?
-Kemal is the standard the facto web framework for Crystal, lightning fast and super simple.
+Kemal is the standard de facto web framework for Crystal, lightning fast and super simple.
+
+Some of the cool features of Kemal are:
+- Support all REST verbs
+- Websocket support
+- Request/Response context, easy parameter handling
+- Built-in and easily extensible middlewares
+- Built-in JSON support
+- Built-in static file serving
+- Built-in view templating via ECR
+
+## Benchmarks
+![screenshot3](./assets/c.png)
 
 ![kemal](./assets/2.png)
 
